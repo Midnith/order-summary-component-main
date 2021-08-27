@@ -30,8 +30,9 @@ h1 {
   font-weight: 900;
   color: var(--darkBlue);
 }
-h3, .cancel-order{
+h2, .cancel-order, .btn-payment{
   font-weight: 700;
+  font-size: 1em;
 }
 
 /******* CARD *******/
@@ -93,9 +94,9 @@ h3, .cancel-order{
   border-radius: .7em;
   box-shadow: 0 1em 1em rgba(224,232,255,.7);
   border: none;
-  padding: .5em 2em;
+  padding: 1em 2em;
   display: block;
-  margin: 0 auto 2em;
+  margin: 2em auto;
   width: 86%;
   cursor: pointer;
 }
