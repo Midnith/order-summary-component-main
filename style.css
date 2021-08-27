@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+  /* Primary */
+  --paleBlue: #e0e8ff;
+  --brightBlue: #392ae0;
+  /* Neutral */
+  --veryPaleBlue: #f5f7ff;
+  --desaturatedBlue: #7280a7;
+  --darkBlue: #1f2f55;
+}
+
+/******* GENERAL *******/
+body {
+  background-color: var(--paleBlue);
+  background-image: url('images/pattern-background-desktop.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 1em;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4em;
+  color: var(--desaturatedBlue);
+}
+h1 {
+  font-weight: 900;
+  color: var(--darkBlue);
+}
+h3, .cancel-order{
+  font-weight: 700;
+}
+
+/******* CARD *******/
+/* General */
+.card {
+  background-color: white;
+  text-align: center;
+  width: 450px;
+  border-radius: 1em;
+  padding-bottom: 2em;
+  box-shadow: 0 0 2em rgba(0,0,0,.3);
+}
+
+/* Top image */
+.upperCard {
+  background-image: url('images/illustration-hero.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 220px;
+  border-radius: 1em 1em 0 0;
+}
+
+/* Order summary */
+.order-summary {
+  padding: 0 3em;
+}
+
+/* Plan banner */
+.plan-card {
+  background-color: var(--veryPaleBlue);
+  border-radius: .6em;
+  margin: 2em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.plan {
+  color: var(--darkBlue);
+  margin-bottom: 0;
+}
+.plan-details {
+  text-align: left;
+  position: relative;
+  right: 2em;
+}
+.plan-details p {
+    margin-top: 0;
+}
+.change-plan:active {
+  color: var(--desaturatedBlue);
+  text-decoration: none;
+}
+
+/* Lower buttons/links */
+.btn-payment {
+  background-color: var(--brightBlue);
+  color: var(--veryPaleBlue);
+  border-radius: .7em;
+  box-shadow: 0 1em 1em rgba(224,232,255,.7);
+  border: none;
+  padding: .5em 2em;
+  display: block;
+  margin: 0 auto 2em;
+  width: 86%;
+  cursor: pointer;
+}
+.btn-payment:active {
+  background-color: var(--desaturatedBlue);
+}
+.cancel-order {
+  text-decoration: none;
+  color: var(--desaturatedBlue);
+}
+.cancel-order:active {
+  color: var(--darkBlue);
+}
+
+/******* FOOTER *******/
+footer {
+  margin: 4em auto 1em;
+}
+
+/******* RESPONSIVE *******/
+@media screen and (max-width:500px) {
+  body {
+    background-image: url('images/pattern-background-mobile.svg');
+    /*zoom: .8;*/
+  }
+  .card {
+    width: 350px;
+  }
+  .plan-details {
+    right: .7em;
+  }
+
+}
+@media screen and (max-width:400px) {
+  body {
+    background-image: url('images/pattern-background-mobile.svg');
+  }
+  .card {
+    width: 250px;
+  }
+  .plan-card {
+      flex-direction: column;
+      padding: 2em;
+  }
+  .plan-details {
+    right: 0;
+  }
+
+}
